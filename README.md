@@ -14,6 +14,15 @@ It's a very easy-to-use function. You just need to pass the **id** where the tex
 
 <script type="text/javascript">
 	var wt = new WordTyping("message", 3);
+	
+	// Added support for callbacks to enable chaining events
+	// added by : inoabrian
+	new WordTyping("1", 5, function(){
+		console.log('1 is done.');
+		new WordTyping('2', 2, function(){
+			console.log('2 is done.');
+		});
+	});
 </script>
 ```
 
